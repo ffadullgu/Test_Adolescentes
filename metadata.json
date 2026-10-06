@@ -1,0 +1,6 @@
+{
+  "name": "PsicoEval Colombia — Evaluación Psicométrica y Vocacional Adolescente",
+  "description": "Plataforma clínica y educativa bajo estándares W3C WCAG para evaluación integral de adolescentes (CI Wechsler, Personalidad Big Five, Aprendizaje Kolb/VARK, Vocación CHASIDE y Percepción PES), seguimiento longitudinal semestral, recomendaciones personalizadas e informe ejecutivo con despacho SMTP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,866 @@
+{
+  "users": [
+    {
+      "id": "usr-valentina-2026",
+      "firstName": "Valentina",
+      "lastName": "Gómez Restrepo",
+      "birthDate": "2010-04-14",
+      "sex": "Femenino",
+      "socioeconomicStratum": 4,
+      "email": "valentina.gomez@estudiante.edu.co",
+      "colombianConsentAccepted": true,
+      "consentTimestamp": "2025-10-05T14:20:00.000Z",
+      "reEvaluationIntervalMonths": 6,
+      "createdAt": "2025-10-05T14:20:00.000Z",
+      "passwordHash": "71faec1a9469055c37d15f6e332cb2b7615678a85bcab901baed15074d705a9100764ee63a2b24847972f619dc19feaa99733ab9e2b576cbef5154a9b69767f1"
+    }
+  ],
+  "assessments": [
+    {
+      "id": "eval-2025-10",
+      "userId": "usr-valentina-2026",
+      "completedAt": "2025-10-06T15:00:00.000Z",
+      "periodLabel": "Octubre 2025 · Línea Base Inicial (Hace 12 meses)",
+      "ageAtEvaluation": 15,
+      "stratumAtEvaluation": 4,
+      "ci": {
+        "totalIQ": 116,
+        "percentile": 84,
+        "classification": "Promedio Alto (110–119)",
+        "rawScore": 16,
+        "subscales": {
+          "verbalComprehension": 80,
+          "visuospatial": 80,
+          "fluidReasoning": 80,
+          "workingMemory": 60,
+          "processingSpeed": 60
+        },
+        "clinicalInterpretation": "Evaluación base a los 15 años: CIT de 116 puntos (Percentil 84, Promedio Alto). Sólida base en comprensión verbal y razonamiento fluido, con oportunidad de fortalecimiento en memoria de trabajo."
+      },
+      "personality": {
+        "openness": 78,
+        "conscientiousness": 72,
+        "extraversion": 65,
+        "agreeableness": 82,
+        "emotionalStability": 68,
+        "dominantTrait": "Amabilidad y Cooperación Empática (A)",
+        "secondaryTrait": "Apertura a la Experiencia (O)",
+        "clinicalInterpretation": "Perfil inicial caracterizado por alta empatía interpersonal (82%) y curiosidad intelectual (78%), en proceso de consolidar hábitos de planificación autónoma."
+      },
+      "learning": {
+        "vark": {
+          "visual": 44,
+          "auditory": 19,
+          "readWrite": 18,
+          "kinesthetic": 19,
+          "dominantModality": "Visual (V)",
+          "multimodalProfile": "Visual (V) (44%) + Kinestésico (K) (19%)"
+        },
+        "kolb": {
+          "concreteExperience": 58,
+          "reflectiveObservation": 75,
+          "abstractConceptualization": 75,
+          "activeExperimentation": 66,
+          "style": "Asimilador",
+          "styleDescription": "Predominio inicial reflexivo-teórico (Asimilador), con preferencia por comprender modelos conceptuales antes de pasar a la experimentación práctica."
+        },
+        "clinicalInterpretation": "Preferencia visual marcada (44%) y estilo de procesamiento Asimilador en el ciclo de Kolb."
+      },
+      "vocation": {
+        "areas": {
+          "C": 58,
+          "H": 68,
+          "A": 64,
+          "S": 76,
+          "I": 82,
+          "D": 48,
+          "E": 78
+        },
+        "interestsScore": {
+          "C": 60,
+          "H": 70,
+          "A": 65,
+          "S": 75,
+          "I": 84,
+          "D": 50,
+          "E": 80
+        },
+        "aptitudesScore": {
+          "C": 56,
+          "H": 66,
+          "A": 63,
+          "S": 77,
+          "I": 80,
+          "D": 46,
+          "E": 76
+        },
+        "primaryCode": "I",
+        "secondaryCode": "E",
+        "primaryName": "Ingenierías, Computación, Robótica y Desarrollo Tecnológico",
+        "secondaryName": "Ciencias Exactas, Naturales, Ecológicas y Biotecnología",
+        "clinicalInterpretation": "Inclinación temprana hacia las Ingenierías y Tecnología (Área I: 82%) y Ciencias Exactas/Biotecnología (Área E: 78%)."
+      },
+      "esp": {
+        "scorePercentage": 68,
+        "zenerHits": 3,
+        "zenerExpectedChance": 2,
+        "intuitiveIndex": 66,
+        "classification": "Sensibilidad Intuitiva Destacada y Reconocimiento Subliminal Rápido",
+        "subscales": {
+          "telepathySymbolic": 65,
+          "clairvoyancePattern": 70,
+          "precognitionIntuitive": 64,
+          "synestheticSensitivity": 73
+        },
+        "clinicalInterpretation": "3/10 aciertos Zener (por encima del azar del 20%) e Índice Intuitivo de 66/100."
+      },
+      "recommendations": {
+        "executiveMotivation": "¡Felicitaciones, Valentina! Los resultados de tu evaluación multidimensional revelan un potencial extraordinario: cuentas con un Cociente Intelectual de 116 (Promedio Alto (110–119)), una personalidad liderada por Amabilidad y Cooperación Empática (A), un estilo de aprendizaje Asimilador (Visual (V)) y una clara vocación hacia Ingenierías, Computación, Robótica y Desarrollo Tecnológico. Este informe ejecutivo ha sido diseñado como tu brújula personal para los próximos 6 meses.",
+        "integratedProfileSynthesis": "El análisis psicométrico cruzado indica una alta congruencia entre la arquitectura cognitiva (CIT 116, Percentil 84), la estructura de personalidad Big Five (Apertura 78%, Responsabilidad 72%, Estabilidad 68%), el procesamiento de aprendizaje (Asimilador / Visual (V)) y el vector vocacional CHASIDE (I-E). La sensibilidad perceptiva PES (66/100) aporta además intuición creativa para la resolución de problemas complejos.",
+        "careers": [
+          {
+            "title": "Ingeniería de Sistemas, Computación e Inteligencia Artificial",
+            "chasideCode": "I",
+            "areaLabel": "Ingenierías y Tecnología",
+            "rationale": "Se alinea directamente con tu alto Razonamiento Fluido (80%) y Memoria de Trabajo (60%), potenciando tu estilo de aprendizaje Asimilador para diseñar arquitecturas de software y modelos predictivos.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería de Sistemas y Computación",
+              "Ciencia de Datos",
+              "Ingeniería de Software"
+            ],
+            "keyStrengthsMatched": [
+              "CI Total 116",
+              "Estilo Kolb Asimilador",
+              "Responsabilidad 72%"
+            ],
+            "affinityPercentage": 83
+          },
+          {
+            "title": "Ingeniería Mecatrónica, Robótica y Automatización",
+            "chasideCode": "I",
+            "areaLabel": "Ingenierías y Tecnología",
+            "rationale": "Integra tu capacidad Visoespacial (80%) con la experimentación práctica y tu curiosidad intelectual (Apertura 78%) para construir sistemas ciberfísicos reales.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería Mecatrónica",
+              "Ingeniería Electrónica",
+              "Ingeniería Aeroespacial"
+            ],
+            "keyStrengthsMatched": [
+              "Visoespacial 80%",
+              "Apertura 78%",
+              "Área I (82%)"
+            ],
+            "affinityPercentage": 83
+          },
+          {
+            "title": "Biotecnología, Genómica e Ingeniería Ambiental",
+            "chasideCode": "E",
+            "areaLabel": "Ciencias Exactas y Naturales",
+            "rationale": "Combina tu rigor analítico en la escala Wechsler con tu vocación por el método científico y la sostenibilidad de los ecosistemas estratégicos de Colombia.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería Biotecnológica",
+              "Biología / Microbiología",
+              "Ingeniería Ambiental"
+            ],
+            "keyStrengthsMatched": [
+              "Razonamiento Fluido 80%",
+              "Área E (78%)",
+              "Sensibilidad Perceptiva 66%"
+            ],
+            "affinityPercentage": 81
+          },
+          {
+            "title": "Física Aplicada, Matemáticas Computacionales y Astrofísica",
+            "chasideCode": "E",
+            "areaLabel": "Ciencias Exactas y Naturales",
+            "rationale": "Ideal para tu perfil cognitivo (Promedio Alto (110–119)) y tu capacidad de conceptualización abstracta para modelar fenómenos complejos de la naturaleza.",
+            "suggestedAcademicPrograms": [
+              "Física",
+              "Matemáticas Aplicadas",
+              "Ingeniería Física"
+            ],
+            "keyStrengthsMatched": [
+              "CI 116 (Percentil 84)",
+              "Conceptualización Abstracta 75%"
+            ],
+            "affinityPercentage": 81
+          }
+        ],
+        "studyAreas": [
+          {
+            "areaTitle": "Estrategia Neurosensorial Dominante: Visual (V)",
+            "modalityAlignment": "Perfil VARK: Visual (V) (44%) + Kinestésico (K) (19%)",
+            "kolbAlignment": "Cuadrante Kolb: Asimilador",
+            "concreteTechniques": [
+              "Construye mapas de arquitectura conceptual con codificación cromática para sintetizar teorías complejas.",
+              "Utiliza diagramas de flujo, matrices comparativas y modelado geométrico antes de memorizar fórmulas.",
+              "Transforma tus lecturas extensas en tableros visuales tipo Kanban o esquemas espaciales."
+            ],
+            "motivationalMessage": "Valentina, tu cerebro asimila y retiene información con mucha mayor velocidad cuando respetas tu canal Visual (V) y tu ciclo Asimilador."
+          },
+          {
+            "areaTitle": "Núcleo Académico de Alta Potencialidad: Ingenierías, Computación, Robótica y Desarrollo Tecnológico",
+            "modalityAlignment": "Afinidad Vocacional Primaria: 82%",
+            "kolbAlignment": "Fortaleza Wechsler asociada: CIT 116",
+            "concreteTechniques": [
+              "Profundizar en electivas o semilleros preuniversitarios de Ingeniería de Sistemas y Computación y Ingeniería Mecatrónica y Robótica.",
+              "Conectar con el área complementaria (Ciencias Exactas, Naturales, Ecológicas y Biotecnología) mediante proyectos interdisciplinarios.",
+              "Entrenar la subescala de Memoria de Trabajo (60%) y Razonamiento Fluido (80%) con retos semanales."
+            ],
+            "motivationalMessage": "La combinación entre tu Área I y tu Área E te brinda un perfil híbrido sumamente valorado en las universidades y escenarios profesionales del siglo XXI."
+          },
+          {
+            "areaTitle": "Entrenamiento Metacognitivo e Intuición Creativa (PES + Apertura)",
+            "modalityAlignment": "Índice Intuitivo PES: 66/100 · Apertura: 78%",
+            "kolbAlignment": "Integración Hemisférica (Análisis Lógico + Insight Creativo)",
+            "concreteTechniques": [
+              "Lleva una bitácora de ideas e insights donde registres soluciones creativas que surgen tras pausas de incubación.",
+              "Practica ejercicios de atención plena (mindfulness de 10 minutos) antes de evaluaciones de alta exigencia para potenciar tu claridad perceptiva.",
+              "Combina la verificación empírica rigurosa con tu capacidad para detectar patrones sutiles."
+            ],
+            "motivationalMessage": "Tu puntuación en sensibilidad perceptiva (66%) unida a tu apertura intelectual (78%) te permite ver conexiones innovadoras donde otros solo ven datos aislados."
+          }
+        ],
+        "extracurriculars": [
+          {
+            "activityTitle": "Semillero de Robótica, Programación Competitiva u Olimpiadas de Ciencia",
+            "category": "Excelencia Académica y Vocacional",
+            "recommendedFrequency": "2 sesiones por semana (3 a 4 horas semanales)",
+            "developmentalImpact": "Potencia el Razonamiento Fluido, el trabajo colaborativo por proyectos y el portafolio preuniversitario.",
+            "whyItFitsAdolescent": "Diseñado específicamente para canalizar tu 82% de afinidad en el Área I y tu estilo Asimilador."
+          },
+          {
+            "activityTitle": "Club de Ajedrez Estratégico, Modelado 3D y Pensamiento Algorítmico",
+            "category": "Gimnasia Cognitiva (Escala Wechsler)",
+            "recommendedFrequency": "2 horas semanales",
+            "developmentalImpact": "Fortalece la Memoria de Trabajo (IMT), la anticipación de jugadas y la velocidad de procesamiento.",
+            "whyItFitsAdolescent": "Aprovecha tu CIT de 116 puntos (Promedio Alto (110–119)) para desafiarte en un entorno estimulante y divertido."
+          },
+          {
+            "activityTitle": "Mentorías entre Pares (Tutoría Académica Solidaria) e Innovación Social",
+            "category": "Desarrollo Socioemocional (Big Five)",
+            "recommendedFrequency": "1 sesión semanal o proyecto mensual",
+            "developmentalImpact": "Consolida el liderazgo ético, la comunicación asertiva, la empatía y la autorregulación emocional.",
+            "whyItFitsAdolescent": "Resuena con tu rasgo dominante de Amabilidad y Cooperación Empática (A) y fortalece tu confianza interpersonal."
+          },
+          {
+            "activityTitle": "Entrenamiento Deportivo de Enfoque / Artes Escénicas o Musicales",
+            "category": "Equilibrio Cuerpo-Mente y Sensibilidad Perceptiva",
+            "recommendedFrequency": "3 veces por semana (45 minutos)",
+            "developmentalImpact": "Regula el cortisol, mejora la coordinación visomotora y estimula la neuroplasticidad hipocampal.",
+            "whyItFitsAdolescent": "Complementa tu Estabilidad Emocional (68%) y tu sensibilidad sinestésica (73%)."
+          }
+        ],
+        "sixMonthMilestones": [
+          {
+            "domain": "ci",
+            "domainLabel": "CI · Wechsler",
+            "goalTitle": "Consolidación de Memoria Operativa y Velocidad Analítica",
+            "actionStep": "Practicar 15 minutos tres veces por semana retos de matrices lógicas, cálculo mental y retención inversa.",
+            "measurableIndicator": "Incrementar o mantener el CIT en rango 119+ en la próxima evaluación semestral."
+          },
+          {
+            "domain": "personality",
+            "domainLabel": "Personalidad · Big Five",
+            "goalTitle": "Fortalecimiento de Autodisciplina y Regulación ante Exámenes",
+            "actionStep": "Aplicar planificación semanal por bloques y registro de hábitos de estudio autónomo.",
+            "measurableIndicator": "Alcanzar ≥ 77% en Responsabilidad y Estabilidad Emocional."
+          },
+          {
+            "domain": "learning",
+            "domainLabel": "Aprendizaje · Kolb & VARK",
+            "goalTitle": "Expansión Multimodal de Estrategias de Estudio",
+            "actionStep": "Combinar tu fortaleza Visual (V) con síntesis escrita y experimentación práctica.",
+            "measurableIndicator": "Aplicar el método en las 3 asignaturas de mayor exigencia durante el semestre."
+          },
+          {
+            "domain": "vocation",
+            "domainLabel": "Vocación · CHASIDE",
+            "goalTitle": "Exploración Vivencial de Carreras Universitarias",
+            "actionStep": "Asistir a 2 ferias universitarias o laboratorios abiertos de Ingeniería de Sistemas, Computación e Inteligencia Artificial y conversar con profesionales del sector.",
+            "measurableIndicator": "Definir tu top 3 de programas universitarios e instituciones en Colombia."
+          },
+          {
+            "domain": "esp",
+            "domainLabel": "Percepción · PES",
+            "goalTitle": "Entrenamiento de Atención Plena e Intuición Creativa",
+            "actionStep": "Registrar en una bitácora personal tus intuiciones, resolución creativa de problemas y atención al detalle.",
+            "measurableIndicator": "Evaluar la evolución del Índice Intuitivo en el control longitudinal de 6 meses."
+          }
+        ]
+      },
+      "smtpSentTo": "ffadullgu@yahoo.com",
+      "smtpSentAt": "2025-10-06T15:00:00.000Z"
+    },
+    {
+      "id": "eval-2026-04",
+      "userId": "usr-valentina-2026",
+      "completedAt": "2026-04-06T15:30:00.000Z",
+      "periodLabel": "Abril 2026 · Seguimiento Semestral I (Hace 6 meses)",
+      "ageAtEvaluation": 15,
+      "stratumAtEvaluation": 4,
+      "ci": {
+        "totalIQ": 122,
+        "percentile": 91,
+        "classification": "Superior (120–129)",
+        "rawScore": 18,
+        "subscales": {
+          "verbalComprehension": 80,
+          "visuospatial": 80,
+          "fluidReasoning": 100,
+          "workingMemory": 80,
+          "processingSpeed": 60
+        },
+        "clinicalInterpretation": "Evolución semestral positiva (+6 puntos de CIT hasta 122, ingresando a rango Superior, Percentil 91). Notable salto en Razonamiento Fluido (100%) y Memoria de Trabajo (80%)."
+      },
+      "personality": {
+        "openness": 84,
+        "conscientiousness": 80,
+        "extraversion": 70,
+        "agreeableness": 85,
+        "emotionalStability": 75,
+        "dominantTrait": "Amabilidad y Cooperación Empática (A)",
+        "secondaryTrait": "Apertura a la Experiencia (O)",
+        "clinicalInterpretation": "Incremento significativo en Responsabilidad (+8 puntos hasta 80%) y Estabilidad Emocional (+7 puntos hasta 75%) tras implementar técnicas de planificación semestral."
+      },
+      "learning": {
+        "vark": {
+          "visual": 44,
+          "auditory": 18,
+          "readWrite": 19,
+          "kinesthetic": 19,
+          "dominantModality": "Visual (V)",
+          "multimodalProfile": "Visual (V) (44%) + Lectura y Escritura (R) (19%)"
+        },
+        "kolb": {
+          "concreteExperience": 62,
+          "reflectiveObservation": 72,
+          "abstractConceptualization": 83,
+          "activeExperimentation": 78,
+          "style": "Convergente",
+          "styleDescription": "Transición evolutiva hacia el estilo Convergente al fortalecer la Experimentación Activa (78%) en laboratorios escolares."
+        },
+        "clinicalInterpretation": "Transición de estilo Asimilador a Convergente, integrando la teoría con el desarrollo de proyectos prácticos."
+      },
+      "vocation": {
+        "areas": {
+          "C": 62,
+          "H": 70,
+          "A": 66,
+          "S": 80,
+          "I": 88,
+          "D": 52,
+          "E": 84
+        },
+        "interestsScore": {
+          "C": 64,
+          "H": 72,
+          "A": 68,
+          "S": 80,
+          "I": 90,
+          "D": 54,
+          "E": 86
+        },
+        "aptitudesScore": {
+          "C": 60,
+          "H": 68,
+          "A": 64,
+          "S": 80,
+          "I": 86,
+          "D": 50,
+          "E": 82
+        },
+        "primaryCode": "I",
+        "secondaryCode": "E",
+        "primaryName": "Ingenierías, Computación, Robótica y Desarrollo Tecnológico",
+        "secondaryName": "Ciencias Exactas, Naturales, Ecológicas y Biotecnología",
+        "clinicalInterpretation": "Consolidación del perfil STEM en el Área I (88%) y Área E (84%), con crecimiento en Ciencias de la Salud/Biomédica (Área S: 80%)."
+      },
+      "esp": {
+        "scorePercentage": 74,
+        "zenerHits": 4,
+        "zenerExpectedChance": 2,
+        "intuitiveIndex": 73,
+        "classification": "Sensibilidad Intuitiva Destacada y Reconocimiento Subliminal Rápido",
+        "subscales": {
+          "telepathySymbolic": 72,
+          "clairvoyancePattern": 76,
+          "precognitionIntuitive": 70,
+          "synestheticSensitivity": 78
+        },
+        "clinicalInterpretation": "4/10 aciertos en protocolo Zener (doble del azar esperado) e Índice Intuitivo de 73/100 (+7 puntos respecto a la línea base)."
+      },
+      "recommendations": {
+        "executiveMotivation": "¡Felicitaciones, Valentina! Los resultados de tu evaluación multidimensional revelan un potencial extraordinario: cuentas con un Cociente Intelectual de 122 (Superior (120–129)), una personalidad liderada por Amabilidad y Cooperación Empática (A), un estilo de aprendizaje Convergente (Visual (V)) y una clara vocación hacia Ingenierías, Computación, Robótica y Desarrollo Tecnológico. Este informe ejecutivo ha sido diseñado como tu brújula personal para los próximos 6 meses.",
+        "integratedProfileSynthesis": "El análisis psicométrico cruzado indica una alta congruencia entre la arquitectura cognitiva (CIT 122, Percentil 91), la estructura de personalidad Big Five (Apertura 84%, Responsabilidad 80%, Estabilidad 75%), el procesamiento de aprendizaje (Convergente / Visual (V)) y el vector vocacional CHASIDE (I-E). La sensibilidad perceptiva PES (73/100) aporta además intuición creativa para la resolución de problemas complejos.",
+        "careers": [
+          {
+            "title": "Ingeniería de Sistemas, Computación e Inteligencia Artificial",
+            "chasideCode": "I",
+            "areaLabel": "Ingenierías y Tecnología",
+            "rationale": "Se alinea directamente con tu alto Razonamiento Fluido (100%) y Memoria de Trabajo (80%), potenciando tu estilo de aprendizaje Convergente para diseñar arquitecturas de software y modelos predictivos.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería de Sistemas y Computación",
+              "Ciencia de Datos",
+              "Ingeniería de Software"
+            ],
+            "keyStrengthsMatched": [
+              "CI Total 122",
+              "Estilo Kolb Convergente",
+              "Responsabilidad 80%"
+            ],
+            "affinityPercentage": 90
+          },
+          {
+            "title": "Ingeniería Mecatrónica, Robótica y Automatización",
+            "chasideCode": "I",
+            "areaLabel": "Ingenierías y Tecnología",
+            "rationale": "Integra tu capacidad Visoespacial (80%) con la experimentación práctica y tu curiosidad intelectual (Apertura 84%) para construir sistemas ciberfísicos reales.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería Mecatrónica",
+              "Ingeniería Electrónica",
+              "Ingeniería Aeroespacial"
+            ],
+            "keyStrengthsMatched": [
+              "Visoespacial 80%",
+              "Apertura 84%",
+              "Área I (88%)"
+            ],
+            "affinityPercentage": 90
+          },
+          {
+            "title": "Biotecnología, Genómica e Ingeniería Ambiental",
+            "chasideCode": "E",
+            "areaLabel": "Ciencias Exactas y Naturales",
+            "rationale": "Combina tu rigor analítico en la escala Wechsler con tu vocación por el método científico y la sostenibilidad de los ecosistemas estratégicos de Colombia.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería Biotecnológica",
+              "Biología / Microbiología",
+              "Ingeniería Ambiental"
+            ],
+            "keyStrengthsMatched": [
+              "Razonamiento Fluido 100%",
+              "Área E (84%)",
+              "Sensibilidad Perceptiva 73%"
+            ],
+            "affinityPercentage": 87
+          },
+          {
+            "title": "Física Aplicada, Matemáticas Computacionales y Astrofísica",
+            "chasideCode": "E",
+            "areaLabel": "Ciencias Exactas y Naturales",
+            "rationale": "Ideal para tu perfil cognitivo (Superior (120–129)) y tu capacidad de conceptualización abstracta para modelar fenómenos complejos de la naturaleza.",
+            "suggestedAcademicPrograms": [
+              "Física",
+              "Matemáticas Aplicadas",
+              "Ingeniería Física"
+            ],
+            "keyStrengthsMatched": [
+              "CI 122 (Percentil 91)",
+              "Conceptualización Abstracta 83%"
+            ],
+            "affinityPercentage": 87
+          }
+        ],
+        "studyAreas": [
+          {
+            "areaTitle": "Estrategia Neurosensorial Dominante: Visual (V)",
+            "modalityAlignment": "Perfil VARK: Visual (V) (44%) + Lectura y Escritura (R) (19%)",
+            "kolbAlignment": "Cuadrante Kolb: Convergente",
+            "concreteTechniques": [
+              "Construye mapas de arquitectura conceptual con codificación cromática para sintetizar teorías complejas.",
+              "Utiliza diagramas de flujo, matrices comparativas y modelado geométrico antes de memorizar fórmulas.",
+              "Transforma tus lecturas extensas en tableros visuales tipo Kanban o esquemas espaciales."
+            ],
+            "motivationalMessage": "Valentina, tu cerebro asimila y retiene información con mucha mayor velocidad cuando respetas tu canal Visual (V) y tu ciclo Convergente."
+          },
+          {
+            "areaTitle": "Núcleo Académico de Alta Potencialidad: Ingenierías, Computación, Robótica y Desarrollo Tecnológico",
+            "modalityAlignment": "Afinidad Vocacional Primaria: 88%",
+            "kolbAlignment": "Fortaleza Wechsler asociada: CIT 122",
+            "concreteTechniques": [
+              "Profundizar en electivas o semilleros preuniversitarios de Ingeniería de Sistemas y Computación y Ingeniería Mecatrónica y Robótica.",
+              "Conectar con el área complementaria (Ciencias Exactas, Naturales, Ecológicas y Biotecnología) mediante proyectos interdisciplinarios.",
+              "Entrenar la subescala de Memoria de Trabajo (80%) y Razonamiento Fluido (100%) con retos semanales."
+            ],
+            "motivationalMessage": "La combinación entre tu Área I y tu Área E te brinda un perfil híbrido sumamente valorado en las universidades y escenarios profesionales del siglo XXI."
+          },
+          {
+            "areaTitle": "Entrenamiento Metacognitivo e Intuición Creativa (PES + Apertura)",
+            "modalityAlignment": "Índice Intuitivo PES: 73/100 · Apertura: 84%",
+            "kolbAlignment": "Integración Hemisférica (Análisis Lógico + Insight Creativo)",
+            "concreteTechniques": [
+              "Lleva una bitácora de ideas e insights donde registres soluciones creativas que surgen tras pausas de incubación.",
+              "Practica ejercicios de atención plena (mindfulness de 10 minutos) antes de evaluaciones de alta exigencia para potenciar tu claridad perceptiva.",
+              "Combina la verificación empírica rigurosa con tu capacidad para detectar patrones sutiles."
+            ],
+            "motivationalMessage": "Tu puntuación en sensibilidad perceptiva (73%) unida a tu apertura intelectual (84%) te permite ver conexiones innovadoras donde otros solo ven datos aislados."
+          }
+        ],
+        "extracurriculars": [
+          {
+            "activityTitle": "Semillero de Robótica, Programación Competitiva u Olimpiadas de Ciencia",
+            "category": "Excelencia Académica y Vocacional",
+            "recommendedFrequency": "2 sesiones por semana (3 a 4 horas semanales)",
+            "developmentalImpact": "Potencia el Razonamiento Fluido, el trabajo colaborativo por proyectos y el portafolio preuniversitario.",
+            "whyItFitsAdolescent": "Diseñado específicamente para canalizar tu 88% de afinidad en el Área I y tu estilo Convergente."
+          },
+          {
+            "activityTitle": "Club de Ajedrez Estratégico, Modelado 3D y Pensamiento Algorítmico",
+            "category": "Gimnasia Cognitiva (Escala Wechsler)",
+            "recommendedFrequency": "2 horas semanales",
+            "developmentalImpact": "Fortalece la Memoria de Trabajo (IMT), la anticipación de jugadas y la velocidad de procesamiento.",
+            "whyItFitsAdolescent": "Aprovecha tu CIT de 122 puntos (Superior (120–129)) para desafiarte en un entorno estimulante y divertido."
+          },
+          {
+            "activityTitle": "Mentorías entre Pares (Tutoría Académica Solidaria) e Innovación Social",
+            "category": "Desarrollo Socioemocional (Big Five)",
+            "recommendedFrequency": "1 sesión semanal o proyecto mensual",
+            "developmentalImpact": "Consolida el liderazgo ético, la comunicación asertiva, la empatía y la autorregulación emocional.",
+            "whyItFitsAdolescent": "Resuena con tu rasgo dominante de Amabilidad y Cooperación Empática (A) y fortalece tu confianza interpersonal."
+          },
+          {
+            "activityTitle": "Entrenamiento Deportivo de Enfoque / Artes Escénicas o Musicales",
+            "category": "Equilibrio Cuerpo-Mente y Sensibilidad Perceptiva",
+            "recommendedFrequency": "3 veces por semana (45 minutos)",
+            "developmentalImpact": "Regula el cortisol, mejora la coordinación visomotora y estimula la neuroplasticidad hipocampal.",
+            "whyItFitsAdolescent": "Complementa tu Estabilidad Emocional (75%) y tu sensibilidad sinestésica (78%)."
+          }
+        ],
+        "sixMonthMilestones": [
+          {
+            "domain": "ci",
+            "domainLabel": "CI · Wechsler",
+            "goalTitle": "Consolidación de Memoria Operativa y Velocidad Analítica",
+            "actionStep": "Practicar 15 minutos tres veces por semana retos de matrices lógicas, cálculo mental y retención inversa.",
+            "measurableIndicator": "Incrementar o mantener el CIT en rango 125+ en la próxima evaluación semestral."
+          },
+          {
+            "domain": "personality",
+            "domainLabel": "Personalidad · Big Five",
+            "goalTitle": "Fortalecimiento de Autodisciplina y Regulación ante Exámenes",
+            "actionStep": "Aplicar planificación semanal por bloques y registro de hábitos de estudio autónomo.",
+            "measurableIndicator": "Alcanzar ≥ 85% en Responsabilidad y Estabilidad Emocional."
+          },
+          {
+            "domain": "learning",
+            "domainLabel": "Aprendizaje · Kolb & VARK",
+            "goalTitle": "Expansión Multimodal de Estrategias de Estudio",
+            "actionStep": "Combinar tu fortaleza Visual (V) con síntesis escrita y experimentación práctica.",
+            "measurableIndicator": "Aplicar el método en las 3 asignaturas de mayor exigencia durante el semestre."
+          },
+          {
+            "domain": "vocation",
+            "domainLabel": "Vocación · CHASIDE",
+            "goalTitle": "Exploración Vivencial de Carreras Universitarias",
+            "actionStep": "Asistir a 2 ferias universitarias o laboratorios abiertos de Ingeniería de Sistemas, Computación e Inteligencia Artificial y conversar con profesionales del sector.",
+            "measurableIndicator": "Definir tu top 3 de programas universitarios e instituciones en Colombia."
+          },
+          {
+            "domain": "esp",
+            "domainLabel": "Percepción · PES",
+            "goalTitle": "Entrenamiento de Atención Plena e Intuición Creativa",
+            "actionStep": "Registrar en una bitácora personal tus intuiciones, resolución creativa de problemas y atención al detalle.",
+            "measurableIndicator": "Evaluar la evolución del Índice Intuitivo en el control longitudinal de 6 meses."
+          }
+        ]
+      },
+      "smtpSentTo": "ffadullgu@yahoo.com",
+      "smtpSentAt": "2026-04-06T15:30:00.000Z"
+    },
+    {
+      "id": "eval-2026-10",
+      "userId": "usr-valentina-2026",
+      "completedAt": "2026-10-06T01:45:00.000Z",
+      "periodLabel": "Octubre 2026 · Evaluación Semestral II (Actual)",
+      "ageAtEvaluation": 16,
+      "stratumAtEvaluation": 4,
+      "ci": {
+        "totalIQ": 128,
+        "percentile": 96,
+        "classification": "Superior (120–129)",
+        "rawScore": 21,
+        "subscales": {
+          "verbalComprehension": 100,
+          "visuospatial": 80,
+          "fluidReasoning": 100,
+          "workingMemory": 80,
+          "processingSpeed": 80
+        },
+        "clinicalInterpretation": "El Cociente Intelectual Total (CIT) alcanza 128 puntos (Percentil 96, rango Superior), con una ganancia acumulada de +12 puntos en 12 meses. Destaca el dominio pleno en Comprensión Verbal (100%) y Razonamiento Fluido (100%), junto con el avance en Velocidad de Procesamiento (80%)."
+      },
+      "personality": {
+        "openness": 90,
+        "conscientiousness": 88,
+        "extraversion": 76,
+        "agreeableness": 86,
+        "emotionalStability": 82,
+        "dominantTrait": "Apertura a la Experiencia (O)",
+        "secondaryTrait": "Responsabilidad y Autodisciplina (C)",
+        "clinicalInterpretation": "Maduración socioemocional sobresaliente: Apertura a la Experiencia (90%) y Responsabilidad (88%) lideran el perfil, acompañadas de una sólida Estabilidad Emocional (82%, +14 puntos en el último año)."
+      },
+      "learning": {
+        "vark": {
+          "visual": 50,
+          "auditory": 19,
+          "readWrite": 19,
+          "kinesthetic": 12,
+          "dominantModality": "Visual (V)",
+          "multimodalProfile": "Visual (V) (50%) + Auditivo/Lectoescritor (38%)"
+        },
+        "kolb": {
+          "concreteExperience": 64,
+          "reflectiveObservation": 74,
+          "abstractConceptualization": 90,
+          "activeExperimentation": 86,
+          "style": "Convergente",
+          "styleDescription": "Combina Conceptualización Abstracta (90%) y Experimentación Activa (86%). Sobresale en la aplicación práctica de ideas teóricas, resolución de problemas técnicos y toma de decisiones estructuradas."
+        },
+        "clinicalInterpretation": "Dominio del cuadrante Convergente de Kolb con canal primario Visual (50%), ideal para disciplinas de ingeniería, modelado científico y arquitectura de sistemas."
+      },
+      "vocation": {
+        "areas": {
+          "C": 68,
+          "H": 74,
+          "A": 72,
+          "S": 84,
+          "I": 94,
+          "D": 58,
+          "E": 89
+        },
+        "interestsScore": {
+          "C": 70,
+          "H": 75,
+          "A": 74,
+          "S": 85,
+          "I": 96,
+          "D": 60,
+          "E": 90
+        },
+        "aptitudesScore": {
+          "C": 66,
+          "H": 73,
+          "A": 70,
+          "S": 83,
+          "I": 92,
+          "D": 56,
+          "E": 88
+        },
+        "primaryCode": "I",
+        "secondaryCode": "E",
+        "primaryName": "Ingenierías, Computación, Robótica y Desarrollo Tecnológico",
+        "secondaryName": "Ciencias Exactas, Naturales, Ecológicas y Biotecnología",
+        "clinicalInterpretation": "Definición vocacional de alta nitidez hacia el Área I (Ingenierías, Computación y Robótica: 94%) y el Área E (Ciencias Exactas y Biotecnología: 89%), con tercera línea en Ciencias Biomédicas (Área S: 84%)."
+      },
+      "esp": {
+        "scorePercentage": 82,
+        "zenerHits": 5,
+        "zenerExpectedChance": 2,
+        "intuitiveIndex": 81,
+        "classification": "Alta Agudeza Intuitiva y Sincronía Perceptiva Superior (Desviación Positiva Significativa)",
+        "subscales": {
+          "telepathySymbolic": 78,
+          "clairvoyancePattern": 84,
+          "precognitionIntuitive": 80,
+          "synestheticSensitivity": 86
+        },
+        "clinicalInterpretation": "En el protocolo Zener registró 5/10 aciertos directos (2.5 veces la media estadística de azar) y un Índice Intuitivo de 81/100, con notable Sensibilidad Sinestésica (86%) y Clarividencia de Patrones (84%)."
+      },
+      "recommendations": {
+        "executiveMotivation": "¡Felicitaciones, Valentina! Los resultados de tu evaluación multidimensional revelan un potencial extraordinario: cuentas con un Cociente Intelectual de 128 (Superior (120–129)), una personalidad liderada por Apertura a la Experiencia (O), un estilo de aprendizaje Convergente (Visual (V)) y una clara vocación hacia Ingenierías, Computación, Robótica y Desarrollo Tecnológico. Este informe ejecutivo ha sido diseñado como tu brújula personal para los próximos 6 meses.",
+        "integratedProfileSynthesis": "El análisis psicométrico cruzado indica una alta congruencia entre la arquitectura cognitiva (CIT 128, Percentil 96), la estructura de personalidad Big Five (Apertura 90%, Responsabilidad 88%, Estabilidad 82%), el procesamiento de aprendizaje (Convergente / Visual (V)) y el vector vocacional CHASIDE (I-E). La sensibilidad perceptiva PES (81/100) aporta además intuición creativa para la resolución de problemas complejos.",
+        "careers": [
+          {
+            "title": "Ingeniería de Sistemas, Computación e Inteligencia Artificial",
+            "chasideCode": "I",
+            "areaLabel": "Ingenierías y Tecnología",
+            "rationale": "Se alinea directamente con tu alto Razonamiento Fluido (100%) y Memoria de Trabajo (80%), potenciando tu estilo de aprendizaje Convergente para diseñar arquitecturas de software y modelos predictivos.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería de Sistemas y Computación",
+              "Ciencia de Datos",
+              "Ingeniería de Software"
+            ],
+            "keyStrengthsMatched": [
+              "CI Total 128",
+              "Estilo Kolb Convergente",
+              "Responsabilidad 88%"
+            ],
+            "affinityPercentage": 95
+          },
+          {
+            "title": "Ingeniería Mecatrónica, Robótica y Automatización",
+            "chasideCode": "I",
+            "areaLabel": "Ingenierías y Tecnología",
+            "rationale": "Integra tu capacidad Visoespacial (80%) con la experimentación práctica y tu curiosidad intelectual (Apertura 90%) para construir sistemas ciberfísicos reales.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería Mecatrónica",
+              "Ingeniería Electrónica",
+              "Ingeniería Aeroespacial"
+            ],
+            "keyStrengthsMatched": [
+              "Visoespacial 80%",
+              "Apertura 90%",
+              "Área I (94%)"
+            ],
+            "affinityPercentage": 95
+          },
+          {
+            "title": "Biotecnología, Genómica e Ingeniería Ambiental",
+            "chasideCode": "E",
+            "areaLabel": "Ciencias Exactas y Naturales",
+            "rationale": "Combina tu rigor analítico en la escala Wechsler con tu vocación por el método científico y la sostenibilidad de los ecosistemas estratégicos de Colombia.",
+            "suggestedAcademicPrograms": [
+              "Ingeniería Biotecnológica",
+              "Biología / Microbiología",
+              "Ingeniería Ambiental"
+            ],
+            "keyStrengthsMatched": [
+              "Razonamiento Fluido 100%",
+              "Área E (89%)",
+              "Sensibilidad Perceptiva 81%"
+            ],
+            "affinityPercentage": 91
+          },
+          {
+            "title": "Física Aplicada, Matemáticas Computacionales y Astrofísica",
+            "chasideCode": "E",
+            "areaLabel": "Ciencias Exactas y Naturales",
+            "rationale": "Ideal para tu perfil cognitivo (Superior (120–129)) y tu capacidad de conceptualización abstracta para modelar fenómenos complejos de la naturaleza.",
+            "suggestedAcademicPrograms": [
+              "Física",
+              "Matemáticas Aplicadas",
+              "Ingeniería Física"
+            ],
+            "keyStrengthsMatched": [
+              "CI 128 (Percentil 96)",
+              "Conceptualización Abstracta 90%"
+            ],
+            "affinityPercentage": 91
+          }
+        ],
+        "studyAreas": [
+          {
+            "areaTitle": "Estrategia Neurosensorial Dominante: Visual (V)",
+            "modalityAlignment": "Perfil VARK: Visual (V) (50%) + Auditivo/Lectoescritor (38%)",
+            "kolbAlignment": "Cuadrante Kolb: Convergente",
+            "concreteTechniques": [
+              "Construye mapas de arquitectura conceptual con codificación cromática para sintetizar teorías complejas.",
+              "Utiliza diagramas de flujo, matrices comparativas y modelado geométrico antes de memorizar fórmulas.",
+              "Transforma tus lecturas extensas en tableros visuales tipo Kanban o esquemas espaciales."
+            ],
+            "motivationalMessage": "Valentina, tu cerebro asimila y retiene información con mucha mayor velocidad cuando respetas tu canal Visual (V) y tu ciclo Convergente."
+          },
+          {
+            "areaTitle": "Núcleo Académico de Alta Potencialidad: Ingenierías, Computación, Robótica y Desarrollo Tecnológico",
+            "modalityAlignment": "Afinidad Vocacional Primaria: 94%",
+            "kolbAlignment": "Fortaleza Wechsler asociada: CIT 128",
+            "concreteTechniques": [
+              "Profundizar en electivas o semilleros preuniversitarios de Ingeniería de Sistemas y Computación y Ingeniería Mecatrónica y Robótica.",
+              "Conectar con el área complementaria (Ciencias Exactas, Naturales, Ecológicas y Biotecnología) mediante proyectos interdisciplinarios.",
+              "Entrenar la subescala de Memoria de Trabajo (80%) y Razonamiento Fluido (100%) con retos semanales."
+            ],
+            "motivationalMessage": "La combinación entre tu Área I y tu Área E te brinda un perfil híbrido sumamente valorado en las universidades y escenarios profesionales del siglo XXI."
+          },
+          {
+            "areaTitle": "Entrenamiento Metacognitivo e Intuición Creativa (PES + Apertura)",
+            "modalityAlignment": "Índice Intuitivo PES: 81/100 · Apertura: 90%",
+            "kolbAlignment": "Integración Hemisférica (Análisis Lógico + Insight Creativo)",
+            "concreteTechniques": [
+              "Lleva una bitácora de ideas e insights donde registres soluciones creativas que surgen tras pausas de incubación.",
+              "Practica ejercicios de atención plena (mindfulness de 10 minutos) antes de evaluaciones de alta exigencia para potenciar tu claridad perceptiva.",
+              "Combina la verificación empírica rigurosa con tu capacidad para detectar patrones sutiles."
+            ],
+            "motivationalMessage": "Tu puntuación en sensibilidad perceptiva (81%) unida a tu apertura intelectual (90%) te permite ver conexiones innovadoras donde otros solo ven datos aislados."
+          }
+        ],
+        "extracurriculars": [
+          {
+            "activityTitle": "Semillero de Robótica, Programación Competitiva u Olimpiadas de Ciencia",
+            "category": "Excelencia Académica y Vocacional",
+            "recommendedFrequency": "2 sesiones por semana (3 a 4 horas semanales)",
+            "developmentalImpact": "Potencia el Razonamiento Fluido, el trabajo colaborativo por proyectos y el portafolio preuniversitario.",
+            "whyItFitsAdolescent": "Diseñado específicamente para canalizar tu 94% de afinidad en el Área I y tu estilo Convergente."
+          },
+          {
+            "activityTitle": "Club de Ajedrez Estratégico, Modelado 3D y Pensamiento Algorítmico",
+            "category": "Gimnasia Cognitiva (Escala Wechsler)",
+            "recommendedFrequency": "2 horas semanales",
+            "developmentalImpact": "Fortalece la Memoria de Trabajo (IMT), la anticipación de jugadas y la velocidad de procesamiento.",
+            "whyItFitsAdolescent": "Aprovecha tu CIT de 128 puntos (Superior (120–129)) para desafiarte en un entorno estimulante y divertido."
+          },
+          {
+            "activityTitle": "Mentorías entre Pares (Tutoría Académica Solidaria) e Innovación Social",
+            "category": "Desarrollo Socioemocional (Big Five)",
+            "recommendedFrequency": "1 sesión semanal o proyecto mensual",
+            "developmentalImpact": "Consolida el liderazgo ético, la comunicación asertiva, la empatía y la autorregulación emocional.",
+            "whyItFitsAdolescent": "Resuena con tu rasgo dominante de Apertura a la Experiencia (O) y fortalece tu confianza interpersonal."
+          },
+          {
+            "activityTitle": "Entrenamiento Deportivo de Enfoque / Artes Escénicas o Musicales",
+            "category": "Equilibrio Cuerpo-Mente y Sensibilidad Perceptiva",
+            "recommendedFrequency": "3 veces por semana (45 minutos)",
+            "developmentalImpact": "Regula el cortisol, mejora la coordinación visomotora y estimula la neuroplasticidad hipocampal.",
+            "whyItFitsAdolescent": "Complementa tu Estabilidad Emocional (82%) y tu sensibilidad sinestésica (86%)."
+          }
+        ],
+        "sixMonthMilestones": [
+          {
+            "domain": "ci",
+            "domainLabel": "CI · Wechsler",
+            "goalTitle": "Consolidación de Memoria Operativa y Velocidad Analítica",
+            "actionStep": "Practicar 15 minutos tres veces por semana retos de matrices lógicas, cálculo mental y retención inversa.",
+            "measurableIndicator": "Incrementar o mantener el CIT en rango 131+ en la próxima evaluación semestral."
+          },
+          {
+            "domain": "personality",
+            "domainLabel": "Personalidad · Big Five",
+            "goalTitle": "Fortalecimiento de Autodisciplina y Regulación ante Exámenes",
+            "actionStep": "Aplicar planificación semanal por bloques y registro de hábitos de estudio autónomo.",
+            "measurableIndicator": "Alcanzar ≥ 93% en Responsabilidad y Estabilidad Emocional."
+          },
+          {
+            "domain": "learning",
+            "domainLabel": "Aprendizaje · Kolb & VARK",
+            "goalTitle": "Expansión Multimodal de Estrategias de Estudio",
+            "actionStep": "Combinar tu fortaleza Visual (V) con síntesis escrita y experimentación práctica.",
+            "measurableIndicator": "Aplicar el método en las 3 asignaturas de mayor exigencia durante el semestre."
+          },
+          {
+            "domain": "vocation",
+            "domainLabel": "Vocación · CHASIDE",
+            "goalTitle": "Exploración Vivencial de Carreras Universitarias",
+            "actionStep": "Asistir a 2 ferias universitarias o laboratorios abiertos de Ingeniería de Sistemas, Computación e Inteligencia Artificial y conversar con profesionales del sector.",
+            "measurableIndicator": "Definir tu top 3 de programas universitarios e instituciones en Colombia."
+          },
+          {
+            "domain": "esp",
+            "domainLabel": "Percepción · PES",
+            "goalTitle": "Entrenamiento de Atención Plena e Intuición Creativa",
+            "actionStep": "Registrar en una bitácora personal tus intuiciones, resolución creativa de problemas y atención al detalle.",
+            "measurableIndicator": "Evaluar la evolución del Índice Intuitivo en el control longitudinal de 6 meses."
+          }
+        ]
+      },
+      "smtpSentTo": "ffadullgu@yahoo.com",
+      "smtpSentAt": "2026-10-06T01:45:00.000Z"
+    }
+  ],
+  "smtpLogs": [
+    {
+      "id": "smtp-init-2026-10",
+      "assessmentId": "eval-2026-10",
+      "timestamp": "2026-10-06T01:46:12.000Z",
+      "recipient": "ffadullgu@yahoo.com",
+      "smtpHost": "smtp.mail.yahoo.com",
+      "smtpPort": 465,
+      "protocol": "SMTPS (SSL/TLS · RFC 5321)",
+      "status": "verified_mime_relay",
+      "subject": "[PsicoEval Colombia] Informe Ejecutivo Psicométrico — Valentina Gómez Restrepo (CIT 128)",
+      "messageId": "<psicoeval-20261006-valentina@smtp.mail.yahoo.com>",
+      "adolescentName": "Valentina Gómez Restrepo",
+      "adolescentEmail": "valentina.gomez@estudiante.edu.co",
+      "summaryText": "CIT Wechsler: 128 | Big Five: Apertura a la Experiencia (O) | Aprendizaje: Convergente (Visual (V)) | Vocación CHASIDE: Área I | PES: 81/100",
+      "htmlBody": "<!DOCTYPE html>\n<html lang=\"es-CO\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <title>Informe Ejecutivo Psicométrico — Valentina Gómez Restrepo</title>\n</head>\n<body style=\"font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#F8FAFC;color:#0F172A;margin:0;padding:24px;\">\n  <div style=\"max-width:760px;margin:0 auto;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;overflow:hidden;\">\n    <div style=\"background:#0F172A;color:#FFFFFF;padding:24px 32px;\">\n      <p style=\"margin:0;font-size:12px;letter-spacing:0.08em;color:#94A3B8;\">PSICOEVAL COLOMBIA · NORMA W3C &amp; LEY ESTATUTARIA 1581 DE 2012</p>\n      <h1 style=\"margin:8px 0 4px;font-size:22px;\">Informe Ejecutivo de Evaluación Psicométrica y Vocacional</h1>\n      <p style=\"margin:0;font-size:14px;color:#CBD5E1;\">Período: Octubre 2026 · Evaluación Semestral II (Actual) · Destinatario Oficial: ffadullgu@yahoo.com</p>\n    </div>\n    <div style=\"padding:28px 32px;\">\n      <h2 style=\"font-size:16px;margin-top:0;border-bottom:1px solid #E2E8F0;padding-bottom:8px;\">1. Ficha Sociodemográfica y Consentimiento Legal (Colombia)</h2>\n      <p style=\"font-size:14px;line-height:1.6;margin:8px 0;\">\n        <strong>Evaluado(a):</strong> Valentina Gómez Restrepo &nbsp;·&nbsp;\n        <strong>Fecha de Nacimiento:</strong> 2010-04-14 (16 años) &nbsp;·&nbsp;\n        <strong>Sexo:</strong> Femenino<br/>\n        <strong>Estrato Socioeconómico (DANE):</strong> Estrato 4 &nbsp;·&nbsp;\n        <strong>Correo:</strong> valentina.gomez@estudiante.edu.co<br/>\n        <strong>Habeas Data (Ley 1581/2012 y Decreto 1377/2013):</strong> Autorización firmada digitalmente (2025-10-05T14:20:00.000Z)\n      </p>\n\n      <h2 style=\"font-size:16px;margin-top:24px;border-bottom:1px solid #E2E8F0;padding-bottom:8px;\">2. Síntesis Multidimensional de las 5 Pruebas (125 Reactivos)</h2>\n      <ul style=\"font-size:14px;line-height:1.7;padding-left:20px;\">\n        <li><strong style=\"color:#1D4ED8;\">CI (Escala Wechsler WISC-V / WAIS-IV):</strong> CIT <strong>128</strong> (Percentil 96 · Superior (120–129)). ICV: 100%, IVE: 80%, IRF: 100%, IMT: 80%, IVP: 80%.</li>\n        <li><strong style=\"color:#047857;\">Personalidad (BIG FIVE / OCEAN):</strong> Apertura: 90%, Responsabilidad: 88%, Extraversión: 76%, Amabilidad: 86%, Estabilidad Emocional: 82%. Rasgo dominante: <em>Apertura a la Experiencia (O)</em>.</li>\n        <li><strong style=\"color:#B45309;\">Estilo de Aprendizaje (Kolb &amp; VARK):</strong> Canal dominante <strong>Visual (V)</strong> (V:50% / A:19% / R:19% / K:12%) · Estilo de Kolb: <strong>Convergente</strong>.</li>\n        <li><strong style=\"color:#C2410C;\">Vocación Profesional (Test CHASIDE):</strong> Área Primaria <strong>I (Ingenierías, Computación, Robótica y Desarrollo Tecnológico: 94%)</strong> · Área Secundaria <strong>E (Ciencias Exactas, Naturales, Ecológicas y Biotecnología: 89%)</strong>.</li>\n        <li><strong style=\"color:#6D28D9;\">Nivel Extrasensorial e Intuición (Estudios PES):</strong> Índice Intuitivo <strong>81/100</strong> · Protocolo Cartas Zener: 5/10 aciertos (azar esperado: 2.0/10) · Alta Agudeza Intuitiva y Sincronía Perceptiva Superior (Desviación Positiva Significativa).</li>\n      </ul>\n\n      <h2 style=\"font-size:16px;margin-top:24px;border-bottom:1px solid #E2E8F0;padding-bottom:8px;\">3. Carreras Profesionales y Áreas Recomendadas</h2>\n      <table style=\"width:100%;border-collapse:collapse;margin-top:12px;\">\n        <thead>\n          <tr style=\"background:#F1F5F9;text-align:left;font-size:12px;color:#475569;\">\n            <th style=\"padding:10px;\">Carrera / Programa Universitario</th>\n            <th style=\"padding:10px;\">Afinidad</th>\n            <th style=\"padding:10px;\">Justificación Psicométrica</th>\n          </tr>\n        </thead>\n        <tbody>\n          \n      <tr>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;font-weight:600;color:#0F172A;\">Ingeniería de Sistemas, Computación e Inteligencia Artificial</td>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;font-family:monospace;color:#C2410C;font-weight:700;\">95% (Área I)</td>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;color:#334155;font-size:13px;\">Se alinea directamente con tu alto Razonamiento Fluido (100%) y Memoria de Trabajo (80%), potenciando tu estilo de aprendizaje Convergente para diseñar arquitecturas de software y modelos predictivos.</td>\n      </tr>\n      <tr>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;font-weight:600;color:#0F172A;\">Ingeniería Mecatrónica, Robótica y Automatización</td>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;font-family:monospace;color:#C2410C;font-weight:700;\">95% (Área I)</td>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;color:#334155;font-size:13px;\">Integra tu capacidad Visoespacial (80%) con la experimentación práctica y tu curiosidad intelectual (Apertura 90%) para construir sistemas ciberfísicos reales.</td>\n      </tr>\n      <tr>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;font-weight:600;color:#0F172A;\">Biotecnología, Genómica e Ingeniería Ambiental</td>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;font-family:monospace;color:#C2410C;font-weight:700;\">91% (Área E)</td>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;color:#334155;font-size:13px;\">Combina tu rigor analítico en la escala Wechsler con tu vocación por el método científico y la sostenibilidad de los ecosistemas estratégicos de Colombia.</td>\n      </tr>\n      <tr>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;font-weight:600;color:#0F172A;\">Física Aplicada, Matemáticas Computacionales y Astrofísica</td>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;font-family:monospace;color:#C2410C;font-weight:700;\">91% (Área E)</td>\n        <td style=\"padding:10px;border-bottom:1px solid #E2E8F0;color:#334155;font-size:13px;\">Ideal para tu perfil cognitivo (Superior (120–129)) y tu capacidad de conceptualización abstracta para modelar fenómenos complejos de la naturaleza.</td>\n      </tr>\n        </tbody>\n      </table>\n\n      <p style=\"margin-top:24px;font-size:13px;color:#475569;background:#F8FAFC;padding:12px;border-left:4px solid #1D4ED8;\">\n        <strong>Síntesis Clínica Integrada:</strong> El análisis psicométrico cruzado indica una alta congruencia entre la arquitectura cognitiva (CIT 128, Percentil 96), la estructura de personalidad Big Five (Apertura 90%, Responsabilidad 88%, Estabilidad 82%), el procesamiento de aprendizaje (Convergente / Visual (V)) y el vector vocacional CHASIDE (I-E). La sensibilidad perceptiva PES (81/100) aporta además intuición creativa para la resolución de problemas complejos.\n      </p>\n    </div>\n  </div>\n</body>\n</html>"
+    }
+  ]
+}
