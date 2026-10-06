@@ -81,6 +81,14 @@ export default function App() {
   const [statusBanner, setStatusBanner] = useState<string | null>(null);
   const [heroImgFailed, setHeroImgFailed] = useState<boolean>(false);
   const [avatarImgFailed, setAvatarImgFailed] = useState<boolean>(false);
+  const [focusRegisterTrigger, setFocusRegisterTrigger] = useState<number>(0);
+  const [showProfileConfigs, setShowProfileConfigs] = useState<boolean>(false);
+
+  const handleGoToRegister = () => {
+    setShowProfileConfigs(false);
+    setActiveSection('profile');
+    setFocusRegisterTrigger((prev) => prev + 1);
+  };
 
   // Cargar datos iniciales desde el backend Express (/api/bootstrap)
   useEffect(() => {
@@ -465,8 +473,8 @@ export default function App() {
           <div className="flex items-center gap-3 shrink-0">
             <button
               type="button"
-              onClick={() => setActiveSection('profile')}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 hover:text-slate-900 whitespace-nowrap"
+              onClick={handleGoToRegister}
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 hover:text-slate-900 whitespace-nowrap cursor-pointer"
             >
               <User className="w-3.5 h-3.5" aria-hidden="true" />
               <span>{currentUser.firstName} · E{currentUser.socioeconomicStratum}</span>
@@ -600,8 +608,8 @@ export default function App() {
 
                     <button
                       type="button"
-                      onClick={() => setActiveSection('profile')}
-                      className="px-3 py-1.5 text-xs font-medium text-slate-700 bg-white border border-slate-300 rounded-md hover:bg-slate-100 whitespace-nowrap self-start sm:self-center"
+                      onClick={handleGoToRegister}
+                      className="px-3 py-1.5 text-xs font-semibold text-blue-800 bg-blue-50 border border-blue-200 rounded-md hover:bg-blue-100 whitespace-nowrap self-start sm:self-center cursor-pointer transition-colors"
                     >
                       Cambiar / Registrar Adolescente
                     </button>
@@ -923,13 +931,7 @@ export default function App() {
         )}
 
         {activeSection === 'profile' && (
-          <div className="space-y-12">
-            <SmtpConfigPanel
-              smtpConfig={smtpConfig}
-              onSaveSmtpConfig={handleSaveSmtpConfig}
-              onTestSmtpSend={() => handleSendReportSmtp(latestAssessment)}
-              isSaving={isSubmitting}
-            />
+          <div className="space-y-8">
             <AuthAndConsentView
               currentUser={currentUser}
               onLoginDemoUser={() => {
@@ -939,8 +941,24 @@ export default function App() {
               }}
               onRegisterNewUser={handleRegisterNewUser}
               isSubmitting={isSubmitting}
+              focusRegisterTrigger={focusRegisterTrigger}
+              showConfigs={showProfileConfigs}
+              onToggleConfigs={() => setShowProfileConfigs((prev) => !prev)}
             />
-            <ArchitectureAndW3CGuide />
+
+            {showProfileConfigs && (
+              <div className="space-y-8 pt-4 border-t border-slate-200">
+                <SmtpConfigPanel
+                  smtpConfig={smtpConfig}
+                  onSaveSmtpConfig={handleSaveSmtpConfig}
+                  onTestSmtpSend={() => handleSendReportSmtp(latestAssessment)}
+                  isSaving={isSubmitting}
+                  defaultOpen={true}
+                  onHide={() => setShowProfileConfigs(false)}
+                />
+                <ArchitectureAndW3CGuide onHide={() => setShowProfileConfigs(false)} />
+              </div>
+            )}
           </div>
         )}
       </main>

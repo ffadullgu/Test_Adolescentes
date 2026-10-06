@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { SmtpConfiguration } from '../types/psychometrics';
-import { Mail, Save, Server, Lock, CheckCircle2, RefreshCw } from 'lucide-react';
+import { Mail, Save, Server, Lock, CheckCircle2, RefreshCw, EyeOff, Settings } from 'lucide-react';
 
 interface SmtpConfigPanelProps {
   smtpConfig: SmtpConfiguration;
   onSaveSmtpConfig: (updated: SmtpConfiguration) => Promise<void>;
   onTestSmtpSend?: () => Promise<void>;
   isSaving: boolean;
+  defaultOpen?: boolean;
+  onHide?: () => void;
 }
 
 export const SMTP_PRESETS: Record<
@@ -51,8 +53,11 @@ export const SmtpConfigPanel: React.FC<SmtpConfigPanelProps> = ({
   smtpConfig,
   onSaveSmtpConfig,
   onTestSmtpSend,
-  isSaving
+  isSaving,
+  defaultOpen = false,
+  onHide
 }) => {
+  const [isExpanded, setIsExpanded] = useState<boolean>(defaultOpen);
   const [preset, setPreset] = useState<SmtpConfiguration['providerPreset']>(smtpConfig.providerPreset || 'yahoo');
   const [host, setHost] = useState<string>(smtpConfig.host);
   const [port, setPort] = useState<number>(smtpConfig.port);
@@ -117,6 +122,31 @@ export const SmtpConfigPanel: React.FC<SmtpConfigPanelProps> = ({
     );
   };
 
+  if (!isExpanded && !onHide) {
+    return (
+      <div className="bg-white border border-slate-200 rounded-lg px-5 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 no-print">
+        <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600">
+          <Server className="w-4 h-4 text-blue-700 shrink-0" aria-hidden="true" />
+          <span className="font-semibold text-slate-900">Configuraciones SMTP:</span>
+          <span className="font-mono text-slate-800">
+            {smtpConfig.host}:{smtpConfig.port} ({smtpConfig.secure ? 'SSL/TLS' : 'STARTTLS'})
+          </span>
+          <span aria-hidden="true">→</span>
+          <strong className="font-mono text-blue-800">{smtpConfig.recipient}</strong>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setIsExpanded(true)}
+          className="px-3.5 py-1.5 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap self-start sm:self-center cursor-pointer"
+        >
+          <Settings className="w-3.5 h-3.5 text-blue-700" aria-hidden="true" />
+          <span>Mostrar Configuraciones SMTP</span>
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white border border-slate-200 rounded-lg p-6 space-y-6 no-print">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-4">
@@ -133,12 +163,29 @@ export const SmtpConfigPanel: React.FC<SmtpConfigPanelProps> = ({
           </p>
         </div>
 
-        <div className="shrink-0 bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2 text-xs font-mono">
-          <span className="text-slate-500 block">Servidor Activo:</span>
-          <strong className="text-slate-900">
-            {smtpConfig.host}:{smtpConfig.port} ({smtpConfig.secure ? 'SSL/TLS' : 'STARTTLS'})
-          </strong>
-          <span className="text-blue-800 block truncate">→ {smtpConfig.recipient}</span>
+        <div className="flex flex-wrap items-center gap-3 shrink-0">
+          <div className="bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2 text-xs font-mono">
+            <span className="text-slate-500 block">Servidor Activo:</span>
+            <strong className="text-slate-900">
+              {smtpConfig.host}:{smtpConfig.port} ({smtpConfig.secure ? 'SSL/TLS' : 'STARTTLS'})
+            </strong>
+            <span className="text-blue-800 block truncate">→ {smtpConfig.recipient}</span>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => {
+              if (onHide) {
+                onHide();
+              } else {
+                setIsExpanded(false);
+              }
+            }}
+            className="px-3.5 py-2 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
+          >
+            <EyeOff className="w-3.5 h-3.5 text-slate-700" aria-hidden="true" />
+            <span>Ocultar Configuraciones</span>
+          </button>
         </div>
       </div>
 

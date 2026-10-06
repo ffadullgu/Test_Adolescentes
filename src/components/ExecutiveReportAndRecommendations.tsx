@@ -50,7 +50,7 @@ export const ExecutiveReportAndRecommendations: React.FC<ExecutiveReportProps> =
   diagramImageSrc
 }) => {
   const [showEmailPreview, setShowEmailPreview] = useState<boolean>(false);
-  const [showSmtpEditor, setShowSmtpEditor] = useState<boolean>(true);
+  const [showSmtpEditor, setShowSmtpEditor] = useState<boolean>(false);
   const [imgError, setImgError] = useState<boolean>(false);
   const [isGeneratingPdf, setIsGeneratingPdf] = useState<boolean>(false);
   const [pdfStatusMessage, setPdfStatusMessage] = useState<string | null>(null);
@@ -195,6 +195,8 @@ export const ExecutiveReportAndRecommendations: React.FC<ExecutiveReportProps> =
           onSaveSmtpConfig={onSaveSmtpConfig}
           onTestSmtpSend={() => onSendReportSmtp(activeRecord)}
           isSaving={isSendingSmtp}
+          defaultOpen={true}
+          onHide={() => setShowSmtpEditor(false)}
         />
       )}
 

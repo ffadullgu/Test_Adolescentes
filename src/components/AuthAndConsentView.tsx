@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { UserProfile } from '../types/psychometrics';
-import { ShieldCheck, UserCheck, Lock, FileCheck2 } from 'lucide-react';
+import { ShieldCheck, UserCheck, Lock, FileCheck2, Settings, EyeOff } from 'lucide-react';
 
 interface AuthAndConsentViewProps {
   currentUser: UserProfile;
@@ -17,13 +17,19 @@ interface AuthAndConsentViewProps {
     reEvaluationIntervalMonths: 3 | 6 | 12;
   }) => Promise<void>;
   isSubmitting: boolean;
+  focusRegisterTrigger?: number;
+  showConfigs?: boolean;
+  onToggleConfigs?: () => void;
 }
 
 export const AuthAndConsentView: React.FC<AuthAndConsentViewProps> = ({
   currentUser,
   onLoginDemoUser,
   onRegisterNewUser,
-  isSubmitting
+  isSubmitting,
+  focusRegisterTrigger = 0,
+  showConfigs = false,
+  onToggleConfigs
 }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -35,6 +41,18 @@ export const AuthAndConsentView: React.FC<AuthAndConsentViewProps> = ({
   const [intervalMonths, setIntervalMonths] = useState<3 | 6 | 12>(6);
   const [consentAccepted, setConsentAccepted] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
+
+  const registerFormRef = useRef<HTMLFormElement | null>(null);
+  const firstNameInputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    if (focusRegisterTrigger > 0) {
+      registerFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        firstNameInputRef.current?.focus();
+      }, 150);
+    }
+  }, [focusRegisterTrigger]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,126 +84,85 @@ export const AuthAndConsentView: React.FC<AuthAndConsentViewProps> = ({
   };
 
   return (
-    <section aria-labelledby="auth-consent-heading" className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      {/* Columna Izquierda: Perfil Activo / Acceso Rápido Longitudinal */}
-      <div className="lg:col-span-5 space-y-6">
-        <div className="bg-white border border-slate-200 rounded-lg p-6">
-          <div className="flex items-center gap-2 text-xs text-emerald-800 font-semibold">
-            <UserCheck className="w-4 h-4" aria-hidden="true" />
-            <span>Sesión Activa Verificada</span>
-          </div>
-          <h2 id="auth-consent-heading" className="text-xl font-semibold text-slate-900 mt-1">
-            Expediente Activo del Adolescente
-          </h2>
-          <p className="text-xs text-slate-600 mt-1">
-            Actualmente estás visualizando el expediente de demostración con seguimiento longitudinal de 12 meses (3 evaluaciones semestrales), o puedes registrar un nuevo participante en el formulario adjunto.
+    <section aria-labelledby="auth-consent-heading" className="space-y-6">
+      {/* Barra superior con acceso directo al Formulario y botón para Ocultar/Mostrar Configuraciones */}
+      <div className="bg-white border border-slate-200 rounded-lg p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <p className="text-xs text-slate-500">
+            Registro de Participantes · Ley Estatutaria 1581 de 2012 (Habeas Data Colombia)
           </p>
-
-          <dl className="mt-5 divide-y divide-slate-100 text-xs">
-            <div className="py-2.5 flex justify-between">
-              <dt className="text-slate-500">Nombre y Apellido:</dt>
-              <dd className="font-semibold text-slate-900">
-                {currentUser.firstName} {currentUser.lastName}
-              </dd>
-            </div>
-            <div className="py-2.5 flex justify-between">
-              <dt className="text-slate-500">Fecha de Nacimiento:</dt>
-              <dd className="font-mono tabular-nums text-slate-900">{currentUser.birthDate}</dd>
-            </div>
-            <div className="py-2.5 flex justify-between">
-              <dt className="text-slate-500">Sexo:</dt>
-              <dd className="text-slate-900">{currentUser.sex}</dd>
-            </div>
-            <div className="py-2.5 flex justify-between">
-              <dt className="text-slate-500">Estrato Socioeconómico (DANE):</dt>
-              <dd className="font-mono tabular-nums font-semibold text-slate-900">
-                Estrato {currentUser.socioeconomicStratum}
-              </dd>
-            </div>
-            <div className="py-2.5 flex justify-between">
-              <dt className="text-slate-500">Correo Electrónico:</dt>
-              <dd className="font-mono text-slate-900">{currentUser.email}</dd>
-            </div>
-            <div className="py-2.5 flex justify-between">
-              <dt className="text-slate-500">Consentimiento Ley 1581/2012:</dt>
-              <dd className="text-emerald-700 font-semibold">Firmado y vigente</dd>
-            </div>
-          </dl>
-
-          <div className="mt-5 pt-4 border-t border-slate-200">
-            <button
-              type="button"
-              onClick={onLoginDemoUser}
-              className="w-full px-4 py-2.5 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors"
-            >
-              Continuar con el Expediente Longitudinal de Valentina Gómez
-            </button>
-          </div>
+          <h2 id="auth-consent-heading" className="text-xl font-semibold text-slate-900 mt-0.5">
+            Registrar o Cambiar Adolescente Evaluado
+          </h2>
         </div>
 
-        {/* Marco Normativo Colombiano de Protección de Datos */}
-        <div className="bg-white border border-slate-200 rounded-lg p-6 space-y-3">
-          <div className="flex items-center gap-2 text-xs font-semibold text-blue-800">
-            <ShieldCheck className="w-4 h-4" aria-hidden="true" />
-            <span>Cumplimiento Normativo en la República de Colombia</span>
-          </div>
-          <h3 className="text-base font-semibold text-slate-900">
-            Protección de Datos y Secreto Profesional Psicológico
-          </h3>
-          <ul className="text-xs text-slate-600 space-y-2 leading-relaxed list-disc pl-4">
-            <li>
-              <strong>Ley Estatutaria 1581 de 2012 y Decreto 1377 de 2013 (Habeas Data):</strong> Garantiza el derecho constitucional que tienen todas las personas a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre ellas en bases de datos.
-            </li>
-            <li>
-              <strong>Ley 1098 de 2006 (Código de la Infancia y la Adolescencia · Art. 33):</strong> Protección especial de datos sensibles de niños, niñas y adolescentes, asegurando que el tratamiento responda al interés superior del adolescente y fines estrictamente educativos y de orientación vocacional.
-            </li>
-            <li>
-              <strong>Ley 1090 de 2006 (Código Deontológico y Bioético del Psicólogo):</strong> Reserva absoluta de los resultados psicométricos, remitidos únicamente al adolescente/acudiente y al profesional supervisor (<code className="font-mono">ffadullgu@yahoo.com</code>).
-            </li>
-          </ul>
+        <div className="flex flex-wrap items-center gap-3">
+          {onToggleConfigs && (
+            <button
+              type="button"
+              onClick={onToggleConfigs}
+              className="px-3.5 py-2 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-lg transition-colors flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
+            >
+              {showConfigs ? (
+                <>
+                  <EyeOff className="w-3.5 h-3.5 text-slate-700" aria-hidden="true" />
+                  <span>Ocultar Configuraciones</span>
+                </>
+              ) : (
+                <>
+                  <Settings className="w-3.5 h-3.5 text-blue-700" aria-hidden="true" />
+                  <span>Mostrar Configuraciones (SMTP y W3C)</span>
+                </>
+              )}
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Columna Derecha: Formulario Accesible W3C de Registro de Nuevo Adolescente */}
-      <div className="lg:col-span-7">
-        <form
-          onSubmit={handleSubmit}
-          aria-labelledby="register-form-title"
-          className="bg-white border border-slate-200 rounded-lg p-6 md:p-8 space-y-6"
-        >
-          <div className="border-b border-slate-200 pb-4">
-            <p className="text-xs text-slate-500">
-              Formulario Estandarizado W3C WCAG 2.1 · Recolección Sociodemográfica
-            </p>
-            <h3 id="register-form-title" className="text-xl font-semibold text-slate-900 mt-1">
-              Registrar Nuevo Adolescente y Firmar Consentimiento Informado
-            </h3>
-          </div>
-
-          {formError && (
-            <div
-              role="alert"
-              className="p-3.5 rounded-lg bg-red-50 border border-red-200 text-xs text-red-800 font-medium"
-            >
-              {formError}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        {/* Columna Principal (Primero en orden visual): Formulario de Registro de Nuevo Adolescente */}
+        <div className="lg:col-span-7 order-1">
+          <form
+            id="register-adolescent-form"
+            ref={registerFormRef}
+            onSubmit={handleSubmit}
+            aria-labelledby="register-form-title"
+            className="bg-white border-2 border-blue-600/20 rounded-lg p-6 md:p-8 space-y-6 shadow-sm"
+          >
+            <div className="border-b border-slate-200 pb-4">
+              <p className="text-xs font-semibold text-blue-800">
+                Formulario Estandarizado W3C WCAG 2.1 · Recolección Sociodemográfica
+              </p>
+              <h3 id="register-form-title" className="text-xl font-semibold text-slate-900 mt-1">
+                Registrar Nuevo Adolescente y Firmar Consentimiento Informado
+              </h3>
             </div>
-          )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="firstName" className="block text-xs font-semibold text-slate-800 mb-1.5">
-                Nombres del Adolescente *
-              </label>
-              <input
-                id="firstName"
-                type="text"
-                required
-                placeholder="Ej. Santiago Andrés"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                className="w-full px-3.5 py-2 text-sm text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-2 focus:outline-blue-700"
-              />
-            </div>
+            {formError && (
+              <div
+                role="alert"
+                className="p-3.5 rounded-lg bg-red-50 border border-red-200 text-xs text-red-800 font-medium"
+              >
+                {formError}
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="firstName" className="block text-xs font-semibold text-slate-800 mb-1.5">
+                  Nombres del Adolescente *
+                </label>
+                <input
+                  id="firstName"
+                  ref={firstNameInputRef}
+                  type="text"
+                  required
+                  placeholder="Ej. Santiago Andrés"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  className="w-full px-3.5 py-2 text-sm text-slate-900 bg-white border border-slate-300 rounded-lg focus:outline-2 focus:outline-blue-700"
+                />
+              </div>
 
             <div>
               <label htmlFor="lastName" className="block text-xs font-semibold text-slate-800 mb-1.5">
@@ -334,7 +311,7 @@ export const AuthAndConsentView: React.FC<AuthAndConsentViewProps> = ({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-5 py-2.5 text-xs font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-colors disabled:opacity-50"
+              className="px-5 py-2.5 text-xs font-semibold text-white bg-blue-700 hover:bg-blue-800 rounded-lg transition-colors disabled:opacity-50 cursor-pointer"
             >
               {isSubmitting
                 ? 'Registrando Perfil...'
@@ -342,6 +319,86 @@ export const AuthAndConsentView: React.FC<AuthAndConsentViewProps> = ({
             </button>
           </div>
         </form>
+      </div>
+
+      {/* Columna Secundaria: Perfil Activo / Marco Normativo Colombiano */}
+      <div className="lg:col-span-5 order-2 space-y-6">
+        <div className="bg-white border border-slate-200 rounded-lg p-6">
+          <div className="flex items-center gap-2 text-xs text-emerald-800 font-semibold">
+            <UserCheck className="w-4 h-4" aria-hidden="true" />
+            <span>Sesión Activa Verificada</span>
+          </div>
+          <h3 className="text-lg font-semibold text-slate-900 mt-1">
+            Expediente Activo del Adolescente
+          </h3>
+          <p className="text-xs text-slate-600 mt-1">
+            Actualmente estás visualizando el expediente de demostración con seguimiento longitudinal de 12 meses (3 evaluaciones semestrales), o puedes registrar un nuevo participante en el formulario principal.
+          </p>
+
+          <dl className="mt-5 divide-y divide-slate-100 text-xs">
+            <div className="py-2.5 flex justify-between">
+              <dt className="text-slate-500">Nombre y Apellido:</dt>
+              <dd className="font-semibold text-slate-900">
+                {currentUser.firstName} {currentUser.lastName}
+              </dd>
+            </div>
+            <div className="py-2.5 flex justify-between">
+              <dt className="text-slate-500">Fecha de Nacimiento:</dt>
+              <dd className="font-mono tabular-nums text-slate-900">{currentUser.birthDate}</dd>
+            </div>
+            <div className="py-2.5 flex justify-between">
+              <dt className="text-slate-500">Sexo:</dt>
+              <dd className="text-slate-900">{currentUser.sex}</dd>
+            </div>
+            <div className="py-2.5 flex justify-between">
+              <dt className="text-slate-500">Estrato Socioeconómico (DANE):</dt>
+              <dd className="font-mono tabular-nums font-semibold text-slate-900">
+                Estrato {currentUser.socioeconomicStratum}
+              </dd>
+            </div>
+            <div className="py-2.5 flex justify-between">
+              <dt className="text-slate-500">Correo Electrónico:</dt>
+              <dd className="font-mono text-slate-900">{currentUser.email}</dd>
+            </div>
+            <div className="py-2.5 flex justify-between">
+              <dt className="text-slate-500">Consentimiento Ley 1581/2012:</dt>
+              <dd className="text-emerald-700 font-semibold">Firmado y vigente</dd>
+            </div>
+          </dl>
+
+          <div className="mt-5 pt-4 border-t border-slate-200">
+            <button
+              type="button"
+              onClick={onLoginDemoUser}
+              className="w-full px-4 py-2.5 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+            >
+              Continuar con el Expediente Longitudinal de Valentina Gómez
+            </button>
+          </div>
+        </div>
+
+        {/* Marco Normativo Colombiano de Protección de Datos */}
+        <div className="bg-white border border-slate-200 rounded-lg p-6 space-y-3">
+          <div className="flex items-center gap-2 text-xs font-semibold text-blue-800">
+            <ShieldCheck className="w-4 h-4" aria-hidden="true" />
+            <span>Cumplimiento Normativo en la República de Colombia</span>
+          </div>
+          <h3 className="text-base font-semibold text-slate-900">
+            Protección de Datos y Secreto Profesional Psicológico
+          </h3>
+          <ul className="text-xs text-slate-600 space-y-2 leading-relaxed list-disc pl-4">
+            <li>
+              <strong>Ley Estatutaria 1581 de 2012 y Decreto 1377 de 2013 (Habeas Data):</strong> Garantiza el derecho constitucional que tienen todas las personas a conocer, actualizar y rectificar las informaciones que se hayan recogido sobre ellas en bases de datos.
+            </li>
+            <li>
+              <strong>Ley 1098 de 2006 (Código de la Infancia y la Adolescencia · Art. 33):</strong> Protección especial de datos sensibles de niños, niñas y adolescentes, asegurando que el tratamiento responda al interés superior del adolescente y fines estrictamente educativos y de orientación vocacional.
+            </li>
+            <li>
+              <strong>Ley 1090 de 2006 (Código Deontológico y Bioético del Psicólogo):</strong> Reserva absoluta de los resultados psicométricos, remitidos únicamente al adolescente/acudiente y al profesional supervisor (<code className="font-mono">ffadullgu@yahoo.com</code>).
+            </li>
+          </ul>
+        </div>
+      </div>
       </div>
     </section>
   );
