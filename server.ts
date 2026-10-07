@@ -22,16 +22,31 @@ const PORT = 3000;
 const DB_DIR = path.resolve(process.cwd(), 'data');
 const DB_FILE = path.join(DB_DIR, 'psicoeval_db.json');
 
-// Valores iniciales por defecto del protocolo SMTP
+// Helper para parsear la configuración de seguridad TLS/SSL o STARTTLS
+function parseSmtpSecure(secureVal?: string, portVal?: number): boolean {
+  if (!secureVal) {
+    return portVal === 465;
+  }
+  const clean = String(secureVal).trim().toLowerCase();
+  if (clean === 'starttls' || clean === 'false' || clean === '0' || clean === 'no') {
+    return false;
+  }
+  if (clean === 'ssl' || clean === 'tls' || clean === 'true' || clean === '1' || clean === 'yes') {
+    return true;
+  }
+  return portVal === 465;
+}
+
+// Valores iniciales por defecto del protocolo SMTP (configurados con Gmail SMTP port 587 STARTTLS)
 const DEFAULT_SMTP_CONFIG: SmtpConfiguration = {
-  providerPreset: 'yahoo',
-  host: process.env.SMTP_HOST || 'smtp.mail.yahoo.com',
-  port: Number(process.env.SMTP_PORT || 465),
-  secure: process.env.SMTP_SECURE !== 'false', // true para 465 (SSL/TLS), false para 587 (STARTTLS)
-  user: process.env.SMTP_USER || 'ffadullgu@yahoo.com',
-  pass: process.env.SMTP_PASS || '',
+  providerPreset: (process.env.SMTP_HOST || 'smtp.gmail.com').includes('gmail') ? 'gmail' : 'custom',
+  host: process.env.SMTP_HOST || 'smtp.gmail.com',
+  port: Number(process.env.SMTP_PORT || 587),
+  secure: parseSmtpSecure(process.env.SMTP_SECURE, Number(process.env.SMTP_PORT || 587)),
+  user: process.env.SMTP_USER || 'adsoprocnca@gmail.com',
+  pass: process.env.SMTP_PASS || 'Cnca070390',
   recipient: process.env.SMTP_RECIPIENT || 'ffadullgu@yahoo.com',
-  senderName: 'PsicoEval Colombia',
+  senderName: process.env.SMTP_SENDER_NAME || 'PsicoEval Colombia',
   updatedAt: new Date().toISOString()
 };
 
@@ -156,7 +171,20 @@ function loadDatabase(): DatabaseSchema {
     const raw = fs.readFileSync(DB_FILE, 'utf-8');
     const parsed = JSON.parse(raw) as DatabaseSchema;
     if (!parsed.smtpConfig) {
-      parsed.smtpConfig = DEFAULT_SMTP_CONFIG;
+      parsed.smtpConfig = { ...DEFAULT_SMTP_CONFIG };
+    } else {
+      // Sincronizar con los valores por defecto / variables de entorno activas
+      if (process.env.SMTP_HOST) parsed.smtpConfig.host = process.env.SMTP_HOST;
+      if (process.env.SMTP_PORT) parsed.smtpConfig.port = Number(process.env.SMTP_PORT);
+      if (process.env.SMTP_SECURE !== undefined) {
+        parsed.smtpConfig.secure = parseSmtpSecure(process.env.SMTP_SECURE, parsed.smtpConfig.port);
+      } else if (parsed.smtpConfig.port === 587) {
+        parsed.smtpConfig.secure = false;
+      }
+      if (process.env.SMTP_USER) parsed.smtpConfig.user = process.env.SMTP_USER;
+      if (process.env.SMTP_PASS) parsed.smtpConfig.pass = process.env.SMTP_PASS;
+      if (process.env.SMTP_RECIPIENT) parsed.smtpConfig.recipient = process.env.SMTP_RECIPIENT;
+      if (process.env.SMTP_SENDER_NAME) parsed.smtpConfig.senderName = process.env.SMTP_SENDER_NAME;
     }
     return parsed;
   } catch {
@@ -199,6 +227,9 @@ async function dispatchExecutiveReportToYahoo(
         auth: {
           user: activeSmtp.user,
           pass: activeSmtp.pass
+        },
+        tls: {
+          rejectUnauthorized: false
         }
       });
 

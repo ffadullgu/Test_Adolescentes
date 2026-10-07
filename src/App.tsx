@@ -57,15 +57,15 @@ export default function App() {
   );
   const [smtpLogs, setSmtpLogs] = useState<SmtpDispatchRecord[]>([]);
   const [smtpConfig, setSmtpConfig] = useState<SmtpConfiguration>({
-    providerPreset: 'yahoo',
-    host: 'smtp.mail.yahoo.com',
-    port: 465,
-    secure: true,
-    user: 'ffadullgu@yahoo.com',
-    pass: '',
+    providerPreset: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // false para puerto 587 (STARTTLS explícito)
+    user: 'adsoprocnca@gmail.com',
+    pass: 'Cnca070390',
     recipient: 'ffadullgu@yahoo.com',
     senderName: 'PsicoEval Colombia',
-    updatedAt: '2026-10-06T01:45:00.000Z'
+    updatedAt: '2026-10-07T22:27:00.000Z'
   });
 
   // Respuestas activas en las 5 pruebas (25 preguntas cada una)

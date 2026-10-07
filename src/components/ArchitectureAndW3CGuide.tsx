@@ -42,27 +42,27 @@ export const ArchitectureAndW3CGuide: React.FC<ArchitectureAndW3CGuideProps> = (
         <div className="bg-white border border-slate-200 rounded-lg p-6 space-y-4">
           <div className="flex items-center gap-2 text-xs font-semibold text-blue-800">
             <Mail className="w-4 h-4" aria-hidden="true" />
-            <span>Protocolo de Correo saliente (RFC 5321 / SMTPS)</span>
+            <span>Protocolo de Correo saliente (RFC 5321 / SMTP STARTTLS)</span>
           </div>
           <h3 className="text-lg font-semibold text-slate-900">
-            Configuración SMTP para ffadullgu@yahoo.com
+            Configuración SMTP para Remisión a ffadullgu@yahoo.com
           </h3>
           <p className="text-xs text-slate-600 leading-relaxed">
-            El servidor Express (<code className="font-mono">server.ts</code>) utiliza <code className="font-mono">nodemailer</code> configurado con los parámetros oficiales de Yahoo Mail para despachar automáticamente el Informe Ejecutivo tras finalizar las pruebas:
+            El servidor Express (<code className="font-mono">server.ts</code>) utiliza <code className="font-mono">nodemailer</code> configurado con los parámetros de Google Gmail SMTP (Puerto 587 · STARTTLS) para despachar automáticamente el Informe Ejecutivo tras finalizar las pruebas:
           </p>
 
           <div className="bg-slate-900 text-slate-100 rounded-lg p-4 font-mono text-xs overflow-x-auto space-y-1">
-            <p className="text-slate-400"># Variables de entorno (.env) para Yahoo Mail SMTP</p>
-            <p>SMTP_HOST="smtp.mail.yahoo.com"</p>
-            <p>SMTP_PORT="465"            # 465 (SSL/TLS implícito) o 587 (STARTTLS)</p>
-            <p>SMTP_SECURE="true"         # true para puerto 465</p>
-            <p>SMTP_USER="ffadullgu@yahoo.com"</p>
-            <p>SMTP_PASS="CONTRASEÑA_DE_APLICACION_YAHOO_16_DIGITOS"</p>
+            <p className="text-slate-400"># Variables de entorno (.env) activas para Gmail SMTP</p>
+            <p>SMTP_HOST="smtp.gmail.com"</p>
+            <p>SMTP_PORT="587"            # 587 (STARTTLS explícito)</p>
+            <p>SMTP_SECURE="STARTTLS"     # secure: false en puerto 587</p>
+            <p>SMTP_USER="adsoprocnca@gmail.com"</p>
+            <p>SMTP_PASS="Cnca070390"     # Contraseña de Aplicación de 16 caracteres</p>
             <p>SMTP_RECIPIENT="ffadullgu@yahoo.com"</p>
           </div>
 
           <p className="text-xs text-slate-500 leading-relaxed">
-            Nota técnica de seguridad Yahoo: Para cuentas <code className="font-mono">@yahoo.com</code> con verificación en dos pasos, Yahoo requiere generar una <em>Contraseña de Aplicación (App Password)</em> en <em>Seguridad de la cuenta &gt; Generar contraseña de aplicación</em> e ingresarla en <code className="font-mono">SMTP_PASS</code>.
+            Nota técnica de autenticación: La cuenta remitente autenticada es <code className="font-mono">adsoprocnca@gmail.com</code> vía STARTTLS en el puerto 587, y el informe ejecutivo psicométrico formal se remite directamente a <code className="font-mono text-blue-800">ffadullgu@yahoo.com</code>.
           </p>
         </div>
 

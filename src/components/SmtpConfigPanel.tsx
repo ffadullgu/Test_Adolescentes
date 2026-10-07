@@ -26,10 +26,10 @@ export const SMTP_PRESETS: Record<
   gmail: {
     label: 'Google Gmail (smtp.gmail.com)',
     host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
     defaultUser: 'adsoprocnca@gmail.com',
-    note: 'Configuración oficial Google Workspace / Gmail SMTPS (Puerto 465 SSL/TLS o 587 STARTTLS con Contraseña de Aplicación).'
+    note: 'Configuración oficial Google Workspace / Gmail SMTP (Puerto 587 STARTTLS o 465 SSL/TLS con Contraseña de Aplicación).'
   },
   outlook: {
     label: 'Outlook / Office 365 (smtp.office365.com)',
